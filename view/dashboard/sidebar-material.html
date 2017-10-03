@@ -1,0 +1,123 @@
+        
+<div ng-controller="sidebarController" layout="column" style="width:200px;margin-top:60px;" ng-cloak>
+                
+    <section layout="row" flex>
+
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop md-whiteframe="40">
+
+            <md-toolbar class="md-theme-indigo">
+                <h1 class="md-toolbar-tools">
+                </h1>
+                
+            </md-toolbar>
+            <md-content layout-margin>
+                    <nav class="navbar navbar-expand-lg   fixed-top" id="mainNav">
+                            <div class="navbar-collapse" id="navbarResponsive">
+                                  <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                                      <a class="nav-link" ui-sref-active="active" ui-sref="app.dashboard">
+                                        <i class="fa fa-fw fa-dashboard"></i>
+                                        <span class="nav-link-text">Dashboard</span>
+                                      </a>
+                                    </li>
+                                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                                      <a class="nav-link" ui-sref-active="active" ui-sref="app.charts" >
+                                        <i class="fa fa-fw fa-area-chart"></i>
+                                        <span class="nav-link-text">Charts</span>
+                                      </a>
+                                    </li>
+                                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                                      <a class="nav-link" ui-sref-active="active" ui-sref="app.table">
+                                        <i class="fa fa-fw fa-table"></i>
+                                        <span class="nav-link-text">Tables</span>
+                                      </a>
+                                    </li>
+                                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                                      <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                                        <i class="fa fa-fw fa-wrench"></i>
+                                        <span class="nav-link-text">Components</span>
+                                      </a>
+                                      <ul class="sidenav-second-level collapse" id="collapseComponents">
+                                        <li>
+                                          <a class="nav-link" ui-sref-active="active" ui-sref="app.components.navbar">Navbar</a>
+                                        </li>
+                                        <li>
+                                          <a class="nav-link" ui-sref-active="active" ui-sref="app.components.cards">Cards</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                                      <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+                                        <i class="fa fa-fw fa-file"></i>
+                                        <span class="nav-link-text">Example Pages</span>
+                                      </a>
+                                      <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                                        <li>
+                                          <a class="nav-link" ui-sref-active="active" ui-sref="login">Login Page</a>
+                                        </li>
+                                        <li>
+                                          <a class="nav-link" ui-sref-active="active" ui-sref="register">Registration Page</a>
+                                        </li>
+                                        <li>
+                                          <a class="nav-link" ui-sref-active="active" ui-sref="forgotpassword">Forgot Password Page</a>
+                                        </li>
+                                        <li>
+                                          <a class="nav-link" ui-sref-active="active" ui-sref="app.blank">Blank Page</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                                      <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+                                        <i class="fa fa-fw fa-sitemap"></i>
+                                        <span class="nav-link-text">Menu Levels</span>
+                                      </a>
+                                      <ul class="sidenav-second-level collapse" id="collapseMulti">
+                                        <li>
+                                          <a ui-sref-active="active" ui-sref="app.menulevelsecond.one">Second Level Item-1</a>
+                                        </li>
+                                        <li>
+                                          <a ui-sref-active="active" ui-sref="app.menulevelsecond.two">Second Level Item-2</a>
+                                        </li>
+                                        <li>
+                                          <a ui-sref-active="active" ui-sref="app.menulevelsecond.three">Second Level Item-3</a>
+                                        </li>
+                                        <li>
+                                          <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">Third Level</a>
+                                          <ul class="sidenav-third-level collapse" id="collapseMulti2">
+                                            <li>
+                                              <a ui-sref-active="active" ui-sref="app.menulevelsecond.menulevelthird.one">Third Level Item-1</a>
+                                            </li>
+                                            <li>
+                                              <a ui-sref-active="active" ui-sref="app.menulevelsecond.menulevelthird.two">Third Level Item-2</a>
+                                            </li>
+                                            <li>
+                                              <a ui-sref-active="active" ui-sref="app.menulevelsecond.menulevelthird.three">Third Level Item-3</a>
+                                            </li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                                      <a class="nav-link" href="#">
+                                        <i class="fa fa-fw fa-link"></i>
+                                        <span class="nav-link-text">Link</span>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                  <div ng-controller="sidebarController" ng-init="toggleLeft()">
+                                      <section>
+                                          <ul class="navbar-nav sidenav-toggler">
+                                              <li class="nav-item">
+                                      <md-button ng-click="toggleLeft()" class="md-raised " >
+                                          <i class="fa fa-fw fa-angle-left"></i>
+                                      </md-button>
+                                    </li>
+                                  </ul>
+                                    </section>
+                                  </div>
+                            </div>
+                            </nav>
+            </md-content>
+        </md-sidenav>
+    </section>
+</div>

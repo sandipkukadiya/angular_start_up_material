@@ -1,0 +1,35 @@
+<div ng-controller="loginController as vm"  ng-cloak>
+    <div class="card card-login mx-auto mt-5">
+        <div class="card-header">Login</div>
+        <div class="card-body">
+          <form name="loginForm" data-ng-submit="vm.dataSubmit()">
+
+          <section>
+         
+                <md-input-container class="md-block">
+                  <label>Email address</label>
+                  <input required ng-model="vm.user.email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/">
+                  <div ng-messages="loginForm.clientEmail.$error">
+                    <div ng-message="required">This is required.</div>
+                  </div>
+                </md-input-container>
+                  <md-input-container class="md-block">
+                    <label>Password</label>
+                    <input type="password" required ng-model="vm.user.password">
+                    <div ng-messages="loginForm.clientPassword.$error">
+                      <div ng-message="required">This is required.</div>
+                    </div>
+                  </md-input-container>
+                  
+                  <md-button type="submit" class="md-raised md-primary">Submit</md-button>
+          </section>
+
+
+</form>
+<div class="text-center">
+  <a class="d-block small mt-3" href="">Register an Account</a>
+  <a class="d-block small" href="">Forgot Password?</a>
+</div>
+</div>
+</div>
+</div>
